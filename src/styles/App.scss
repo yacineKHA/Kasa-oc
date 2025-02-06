@@ -1,0 +1,15 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 10%;
+
+  .main-content {
+    flex: 1; //Va forcer à contenir tout l'espace dispo
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+

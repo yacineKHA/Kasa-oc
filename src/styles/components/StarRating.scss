@@ -1,0 +1,11 @@
+@use "../variables.scss" as *;
+
+.star-rating-main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+
+    img {
+        width: 5px;
+    }
+}

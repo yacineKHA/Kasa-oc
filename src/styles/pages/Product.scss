@@ -1,0 +1,76 @@
+@use "../variables.scss" as *;
+
+.product-main-container {
+    display: flex;
+    flex-direction: column;
+
+    .product-image-container {
+        width: 100%;
+
+        img {}
+
+    }
+
+    .product-info-container {
+        display: flex;
+        justify-content: space-between;
+
+        .product-title-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .product-title {
+                color: $primary-color;
+            }
+
+            .product-tags {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .product-personnal-info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+
+            .product-host-container {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                .product-host-name {
+                    color: $primary-color;
+                }
+
+                .product-picture-container {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50px;
+                    overflow: hidden;
+
+                    img {
+                        width: 64px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .product-dropdowns-container {
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        margin-top: 20px;
+
+        .dropdown-main-container {
+            flex: 1;
+        }
+    }
+}
