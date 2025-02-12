@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="app-container">
-        <BrowserRouter basename='/Kasa-oc/'>
+        <BrowserRouter>
           <Header />
           <div className="main-content">
             <AppRoutes />

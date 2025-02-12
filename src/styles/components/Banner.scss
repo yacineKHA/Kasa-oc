@@ -26,6 +26,7 @@
 
     p {
         font-size: 48px;
+        font-weight: 700;
         z-index: 2;
         color: white;
     }
@@ -40,7 +41,9 @@
         }
 
         p {
-            font-size: 24px;
+            font-size: 22px;
+            margin-left: 16px;
+            margin-right: 16px;
         }
     }
 }
