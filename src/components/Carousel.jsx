@@ -2,6 +2,8 @@ import { useState } from 'react';
 import '../styles/components/Carousel.scss';
 import leftArrow from '../assets/left-arrow.png';
 import rightArrow from '../assets/right-arrow.png';
+import PropTypes from 'prop-types';
+
 
 const Carousel = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,5 +34,10 @@ const Carousel = ({ images }) => {
         </div>
     );
 };
+
+Carousel.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired, // images doit être un tableau de chaînes de caractères et est requis
+};
+
 
 export default Carousel;

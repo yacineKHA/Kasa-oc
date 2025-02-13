@@ -1,5 +1,7 @@
 import { Link } from 'react-router'
-import '../styles/components/LocationCard.scss'
+import '../styles/components/LocationCard.scss';
+import PropTypes from 'prop-types';
+
 
 const LocationCard = ({data})=>{
 

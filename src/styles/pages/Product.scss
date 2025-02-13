@@ -12,12 +12,12 @@
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
+        margin-bottom: 40px;
 
         .product-title-container {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            margin-bottom: 20px;
 
             .product-title {
                 color: $primary-color;
@@ -40,7 +40,7 @@
         .product-personnal-info-container {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: flex-end;
             gap: 35px;
 
@@ -67,16 +67,14 @@
                 }
             }
         }
-
-
     }
-
 
     .product-dropdowns-container {
         display: flex;
         width: 100%;
         gap: 50px;
         margin-top: 20px;
+        margin-bottom: 50px;
 
         .dropdown-main-container {
             flex: 1;

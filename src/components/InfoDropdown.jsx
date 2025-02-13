@@ -1,6 +1,8 @@
 import '../styles/components/InfoDropdown.scss'
 import icon from "../assets/arrow_dropdown.png"
 import { useState } from 'react'
+import PropTypes from 'prop-types';
+
 
 const InfoDropdown = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,5 +33,13 @@ const InfoDropdown = ({ title, content }) => {
         </div>
     )
 }
+
+InfoDropdown.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+    ]).isRequired,
+};
 
 export default InfoDropdown;

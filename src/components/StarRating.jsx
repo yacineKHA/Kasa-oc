@@ -1,6 +1,8 @@
 import starInactive from "../assets/star-inactive.png";
 import starActive from "../assets/star-active.png";
-import '../styles/components/StarRating.scss'
+import '../styles/components/StarRating.scss';
+import PropTypes from 'prop-types';
+
 
 const StarRating = ({ rating }) => {
   const totalStars = 5; // Nombre total d'étoiles
@@ -18,5 +20,9 @@ const StarRating = ({ rating }) => {
     </div>
   );
 };
+
+StarRating.propTypes = {
+  rating: PropTypes.string.isRequired
+}
 
 export default StarRating;

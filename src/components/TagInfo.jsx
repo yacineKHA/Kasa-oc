@@ -1,4 +1,6 @@
 import '../styles/components/TagInfo.scss';
+import PropTypes from 'prop-types';
+
 
 const TagInfo = ({content})=>{
 
@@ -7,6 +9,10 @@ const TagInfo = ({content})=>{
             {content}
         </div>
     )
+}
+
+TagInfo.propTypes = {
+    content: PropTypes.string.isRequired
 }
 
 export default TagInfo;
