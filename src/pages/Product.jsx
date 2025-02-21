@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import InfoDropdown from "../components/InfoDropdown";
 import TagInfo from "../components/TagInfo";
 import StarRating from "../components/StarRating";
+import DropdownSection from "../components/DropdownSection";
 
 const Product = () => {
     const { id } = useParams();
@@ -13,6 +14,17 @@ const Product = () => {
     if (!product) {
         return <Navigate to="/404" replace />
     }
+
+    const dropdownsList = [
+        {
+            title: "Description",
+            content: product.description
+        },
+        {
+            title: "Équipements",
+            content: product.equipments
+        }
+    ];
 
     return (
         <div className="product-main-container">
@@ -40,14 +52,7 @@ const Product = () => {
                         <StarRating rating={product.rating} />
                     </div>
                 </div>
-                <div className="product-dropdowns-container">
-                    <div className="dropdown-main-container">
-                        <InfoDropdown title="Description" content={product.description} />
-                    </div>
-                    <div className="dropdown-main-container">
-                        <InfoDropdown title="Équipements" content={product.equipments} />
-                    </div>
-                </div>
+                <DropdownSection dropdowns={dropdownsList} />
             </div>
         </div>
     )

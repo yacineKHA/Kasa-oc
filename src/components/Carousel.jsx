@@ -12,14 +12,18 @@ const Carousel = ({ images }) => {
     return (
         <div className="carousel-container">
             {images.length > 1 && (
-                <img className='carousel-arrow left-arrow' src={leftArrow} alt="flèche de gauche" onClick={()=> handlePrev(images, setCurrentIndex)} />
+                <img className='carousel-arrow left-arrow' src={leftArrow} alt="flèche de gauche" onClick={() => handlePrev(images, setCurrentIndex)} />
             )}
             <div className="carousel-slide">
                 <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+                <div className='image-index'>
+                    {currentIndex + 1}/{images.length}
+                </div>
             </div>
             {images.length > 1 && (
-                <img className='carousel-arrow right-arrow' src={rightArrow} alt="flèche de droite" onClick={()=> handleNext(images, setCurrentIndex)} />
+                <img className='carousel-arrow right-arrow' src={rightArrow} alt="flèche de droite" onClick={() => handleNext(images, setCurrentIndex)} />
             )}
+
         </div>
     );
 };

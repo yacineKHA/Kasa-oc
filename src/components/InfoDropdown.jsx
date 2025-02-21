@@ -19,7 +19,12 @@ const InfoDropdown = ({ title, content }) => {
                     <img className={`icon ${isOpen ? 'rotate' : ''}`} src={icon} alt='arrow' />
                 </div>
             </div>
+
+            {/**
+             * Cntenu affiché sous condition
+             */}
             <div className={`dropdown-content-container ${isOpen ? 'open' : ''}`}>
+                {/** Cas où content est un tableau */}
                 {Array.isArray(content) ? (
                     content.map((item, index) => (
                         <div key={index} className="dropdown-content-item">
